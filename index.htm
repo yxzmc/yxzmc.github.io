@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真寻网站</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/css1.css">
+    <link rel="stylesheet" href="css/gif.css">
+    <link rel="stylesheet" href="css/图片上升.css">
+    <link rel="stylesheet" href="css/图片轮播.css">
+    <link rel="stylesheet" href="css/音乐播放器.css">
+    <script src="js/时间.js"></script>
+    <script src="js/下拉菜单项.js"></script>
+    <style></style>
+</head>
+<body>
+
+<!--背景音乐js!-->
+<audio autoplay id="bgMusic"></audio>
+<script>
+    var audio = document.getElementById('bgMusic');
+        var musicList = ['video/2-ED-480P 清晰-AV1.mp3', 'video/1 (1).mp4', 'video/1 (2).mp4',
+            'video/1 (3).mp4', 'video/1 (4).mp4', 'video/1 (5).mp4', 'video/1 (6).mp4', 'video/1 (7).mp4', 'video/1 (8).mp4'
+            , 'video/1 (9).mp4', 'video/1 (10).mp4', 'video/1 (11).mp4', 'video/1 (12).mp4', 'video/1 (13).mp4', 'video/1 (14).mp4'
+            , 'video/1 (15).mp4', 'video/1 (16).mp4', 'video/1 (17).mp4', 'video/1 (18).mp4', 'video/1 (19).mp4', 'video/1 (20).mp4', 'video/1 (21).mp4'
+            , 'video/1 (22).mp4', 'video/1 (23).mp4', 'video/1 (24).mp4', 'video/1 (25).mp4', 'video/1 (26).mp4', 'video/1 (27).mp4', 'video/1 (28).mp4', 'video/1 (29).mp4'
+            ,'video/1 (30).mp4','video/1 (31).mp4','video/1 (32).mp4','video/1 (33).mp4','video/1 (34).mp4','video/1 (35).mp4','video/1 (36).mp4','video/1 (37).mp4','video/1 (38).mp4'
+            ,'video/1 (39).mp4','video/1 (40).mp4','video/1 (41).mp4','video/1 (42).mp4']; // 音乐文件列表，将文件名替换为你自己的音乐文件
+        var originalMusic = 'video/1-OP-480P 清晰-AV1.mp3'; // 原始音乐文件路径
+        var randomIndex;
+        
+        // 移除原始音乐文件路径，确保不会重复播放
+        var index = musicList.indexOf(originalMusic);
+        if (index !== -1) {
+            musicList.splice(index, 1);
+        }
+        
+        // 如果音乐列表不为空，则随机选择一首音乐进行播放
+        if (musicList.length > 0) {
+            randomIndex = Math.floor(Math.random() * musicList.length);
+            audio.src = musicList[randomIndex]; // 设置音乐源
+            audio.load(); // 加载音乐
+            audio.play(); // 播放音乐
+        } else {
+            console.error("音乐列表为空，无法播放背景音乐。");
+        }
+        
+        // 监听音频播放结束事件
+        audio.addEventListener('ended', function() {
+            // 移除 loop 属性，使音频只播放一次
+            audio.removeAttribute('loop');
+        });
+        audio.volume = 0.8; // 设置音量为一半大小
+</script>
+    
+
+
+
+<header>
+    <p>当前系统时间：</p>
+    <div id="time"></div>
+    <div id="dateDisplay"></div>
+    <h1>@面向蔡san平台</h1>
+</header>
+
+<!--图片上升
+    <div class="image-container">
+    我的b站
+    <img class="hidden-image" src="images/鼠标3/favicon-32x32.png" alt="">
+    </div>
+!-->
+
+<div id="dhl">
+    <ul>
+        <li>
+            <li class="image-container"><a href="index.htm">首页</a>
+            <img class="hidden-image" src="images/鼠标2/favicon-32x32.png" alt=""></li>
+        <li>
+            <li class="image-container"><a href="https://www.bilibili.com/" target="_blank">我的b站</a>
+            <img class="hidden-image" src="images/鼠标3/favicon-32x32.png" alt=""></li>
+
+        <li class="dropdown image-container">
+            <a href="#" class="dropbtn">chatGPT</a>
+            <img class="hidden-image" src="images/鼠标4/favicon-32x32.png" alt="">
+            <div class="dropdown-content">
+                <a href="https://chat18.aichatos.xyz/" target="_blank">chat18</a>
+                <a href="https://kimi.moonshot.cn/" target="_blank">kimi ai</a>
+                <a href="https://yiyan.baidu.com/" target="_blank">文心一言</a>
+                <a href="https://xinghuo.xfyun.cn/desk" target="_blank">讯飞星火</a>
+            </div>
+        </li>
+        <li class="dropdown image-container">
+            <a href="#" class="dropbtn">飞书云文档</a>
+            <img class="hidden-image" src="images/鼠标5/favicon-32x32.png" alt="">
+            <div class="dropdown-content">
+                <a href="https://wrj7mvleoe.feishu.cn/drive/home/recents/" target="_blank">云文档</a>
+                <a href="https://wrj7mvleoe.feishu.cn/docx/Q0PZd1MbzoajRuxle2acAf7ln1c" target="_blank">短期事件</a>
+                <a href="https://wrj7mvleoe.feishu.cn/docx/OvZcdtBoPoKDBDxX1iXcVBnHn07" target="_blank">动作生成机</a>
+                <a href="https://wrj7mvleoe.feishu.cn/drive/me/" target="_blank">云盘</a>
+            </div>
+        </li>
+        <li class="image-container"><a href="http://portal.xjnu.edu.cn/srun_portal_pc?ac_id=4&theme=basic4&url=www.msftconnecttest.com" target="_blank">深澜软件</a>
+            <img class="hidden-image" src="images/鼠标7/favicon-32x32.png" alt="">
+        </li>
+
+        <li class="dropdown image-container">
+            <a href="#" class="dropbtn">其他</a>
+            <img class="hidden-image" src="images/鼠标6/favicon-32x32.png" alt="">
+            <div class="dropdown-content">
+                <a href="https://mail.qq.com/cgi-bin/frame_html?sid=lXbZE47Mo7yPrm4I&r=811ebf16278e6b34d70052364b4b0c9b&lang=zh" target="_blank">qq邮箱</a>
+                <a href="https://i.chaoxing.com/base?t=1677566455335" target="_blank">学习通</a>
+                <a href="https://cen.bnu.edu.cn/commit/main/xsxx.asp" target="_blank">python</a>
+                <a href="https://www.xjnu.edu.cn/" target="_blank">学校官网</a>
+                <a href="https://www.1ppt.com/" target="_blank">ppt</a>
+            </div>
+        </li>
+        
+        <!--
+        <li class="dropdown">
+            <a href="#" class="dropbtn">空</a>
+            <div class="dropdown-content">
+                <a href="" target="_blank">1</a>
+                <a href="" target="_blank">2</a>
+                <a href="" target="_blank">3</a>
+                <a href="" target="_blank">4</a>
+                <a href="" target="_blank">5</a>
+            </div>
+        </li>
+        -->
+    </ul>
+</div>
+
+
+<div class="slider">
+        <button id="prevBtn">&lt;</button>
+        <img src="images/素材/横版/1.png" alt="Image 1" class="active">
+        <img src="images/素材/横版/2.png" alt="Image 2">
+        <img src="images/素材/横版/3.png" alt="Image 3">
+        <img src="images/素材/横版/4.png" alt="Image 4">
+        <img src="images/素材/横版/5.png" alt="Image 5">
+        <img src="images/素材/横版/6.png" alt="Image 6">
+        <img src="images/素材/横版/7.png" alt="Image 7">
+        <img src="images/素材/横版/8.png" alt="Image 8">
+        <img src="images/素材/横版/9.png" alt="Image 9">
+        <img src="images/素材/横版/10.png" alt="Image 10">
+        <img src="images/素材/横版/11.png" alt="Image 11">
+        <img src="images/素材/横版/12.png" alt="Image 12">
+        <button id="nextBtn">&gt;</button>
+        <div class="progress-bar">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+</div>
+
+<!--图片轮播js!-->
+<script>
+    const images = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+
+    function changeImage(step) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + step + images.length) % images.length;
+        images[currentIndex].classList.add('active');
+        updateProgressBar();
+    }
+
+    function updateProgressBar() {
+        const progressBar = document.querySelector('.progress-bar');
+        const progressSpans = progressBar.querySelectorAll('span');
+        progressSpans.forEach((span, index) => {
+            if (index === currentIndex) {
+                span.classList.add('active');
+            } else {
+                span.classList.remove('active');
+            }
+        });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        changeImage(-1);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        changeImage(1);
+    });
+
+    setInterval(function() {
+        changeImage(1);
+    }, 3000); // 每隔3秒切换一次图片
+</script>
+
+
+<audio id="audioPlayer" controls>
+    <source src="video/1-OP-480P 清晰-AV1.mp3" type="audio/mpeg">
+    您的浏览器不支持音频播放。
+</audio>
+
+<div class="player">
+    <div class="song-info">正在播放：<span id="song-title"></span></div>
+    <button id="playButton" class="control-button">播放</button>
+    <button id="pauseButton" class="control-button">暂停</button>
+    <button id="nextButton" class="control-button">下一首</button>
+    <ul id="song-list"></ul>
+</div>
+
+<script src="js/音乐播放器.js"></script>
+
+
+
+
+<div id="gif1" class="gif-container">
+    <img src="GIF/未标题-5.gif" alt="GIF Image 1">
+</div>
+<div id="gif2" class="gif-container">
+    <img src="GIF/9.gif" alt="GIF Image 2">
+</div>
+<div id="gif3" class="gif-container1">
+    <img src="GIF/嘶吼1.gif" alt="GIF Image 3">
+</div>
+<div id="gif4" class="gif-container1">
+    <img src="GIF/10一次.gif" alt="GIF Image 4">
+</div>
+<!--
+<div id="gif3" class="gif-container1">
+    <img src="" alt="">
+</div>
+-->
+
+
+
+<div class="container">
+    <div id="iframe-container">
+            <iframe src="https://www.bilibili.com/v/popular/all/?spm_id_from=333.1007.0.0" frameborder="0" ></iframe>
+    </div>
+</div>
+    
+
+
+<div id="dibu">
+        &copy; 2024 真寻网站 | <a href="mailto:info@example.com">17371948041@163.com</a>
+        主站：<a href="https://yxzmc.github.io/" target="_blank">真寻网站</a>
+</div>
+
+
+</div>
+</body>
+</html>
