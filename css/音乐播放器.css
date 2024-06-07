@@ -38,14 +38,14 @@ audio::-webkit-media-controls {
 #song-list {
     margin-top: 20px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #song-list li {
     padding: 8px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: #666464;
+    color: #302f2f;
     transition: background-color 0.3s ease;
 }
 #song-list li:last-child {
