@@ -1,0 +1,85 @@
+/* 隐藏audio元素的默认控件 */
+audio::-webkit-media-controls {
+    display:none !important;
+}
+/* 改善播放器容器样式 */
+.player {
+    border-radius: 15px;
+    position: absolute;
+    left: 35%;
+    top: 4.5%;
+    background-image: url(../images/素材/微信截图_20240504012022.png);
+    background-size: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 100%;
+    height: 300px;
+    max-width: 800px;
+    margin: 200px;
+    text-align: center;
+}
+/* 美化按钮样式 */
+.control-button {
+    margin: 5px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(to right, #89d5ec, #fbc2eb);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+/* 悬停效果 */
+.control-button:hover {
+    background: linear-gradient(to right, #7cd6f1, #f3f2f3);
+    transform: translateY(-2px);
+}
+/* 优化歌曲列表样式 */
+#song-list {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#song-list li {
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #666464;
+    transition: background-color 0.3s ease;
+}
+#song-list li:last-child {
+    border-bottom: none;
+}
+#song-list li:hover {
+    background-color: rgb(156, 243, 243,0.5);
+}
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .player {
+        padding: 15px;
+    }
+
+    .control-button {
+        padding: 10px 15px;
+    }
+}
+/* 通用滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px; /* 滚动条的宽度 */
+}
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* 滚动条轨道的颜色 */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滚动条滑块的颜色 */
+    border-radius: 4px; /* 滚动条滑块的圆角 */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 鼠标悬停在滚动条滑块上时的颜色 */
+}
+/* 自定义特定元素的滚动条 */
+#song-list {
+    overflow-y: auto; /* 允许垂直滚动 */
+    max-height: 200px; /* 设置最大高度，超过这个高度将出现滚动条 */}
+

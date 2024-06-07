@@ -1,0 +1,87 @@
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px; /* 增加内边距 */
+    background-color: rgb(243, 186, 186); /* 更换背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none;
+    border-radius: 50%; /* 圆角效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* 阴影效果 */
+    cursor: pointer;
+    transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+    font-size: 24px; /* 保持原有的字体大小 */
+    }
+
+    .slider button:hover {
+    background-color: rgb(243, 186, 186) /* 鼠标悬停时的背景颜色 */
+    }
+
+    .slider button:focus {
+    outline: none; /* 移除默认的聚焦轮廓 */
+    }
+    
+    .slider {
+        margin:30px 0 30px 0;
+        border-radius: 15px; /* 所有角的圆角大小相同 */
+        width: 600px;
+        left: 5%;
+        overflow: hidden;
+        position:absolute;
+        border: 1px solid #ccc;
+        box-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.3),
+        10px 10px 15px rgba(0, 0, 0, 0.2);
+    }
+    .slider img {
+        width: 100%;
+        height: 100%;
+        display: none;
+        transition: opacity 0.5s;
+    }
+    .slider img.active {
+        display: block;
+        opacity: 1;
+    }
+    .slider {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .slider button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color:rgb(227, 243, 243);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .slider button:focus {
+        outline: none;
+    }
+    #prevBtn {
+        left: 0;
+    }
+    #nextBtn {
+        right: 0;
+    }
+    .progress-bar {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    .progress-bar span {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .progress-bar span.active {
+        background-color: #333;
+    }
