@@ -11,7 +11,7 @@
     position: absolute;
 }
 .gif-container1 img {
-    width: 300px; /* 固定宽度 */
+    width: 200px; /* 固定宽度 */
     height: auto; /* 自适应高度 */
 }
 /* 设置各个GIF的位置 */
@@ -25,9 +25,9 @@
 }
 #gif3 {
     top: 2%;
-    left: -2%;
+    left: 30.5%;
 }
 #gif4 {
-    top: 2.5%;
-    left: 12%;
+    top: 5%;
+    left: 0%;
 }
