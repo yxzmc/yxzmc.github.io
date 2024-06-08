@@ -7,13 +7,13 @@ audio::-webkit-media-controls {
     border-radius: 15px;
     position: absolute;
     left: 35%;
-    top: 4.5%;
+    top: 5.5%;
     background-image: url(../images/素材/微信截图_20240504012022.png);
     background-size: 100%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     padding: 25px;
     width: 100%;
-    height: 300px;
+    height: 250px;
     max-width: 800px;
     margin: 200px;
     text-align: center;
@@ -38,7 +38,7 @@ audio::-webkit-media-controls {
 #song-list {
     margin-top: 20px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -81,5 +81,5 @@ audio::-webkit-media-controls {
 /* 自定义特定元素的滚动条 */
 #song-list {
     overflow-y: auto; /* 允许垂直滚动 */
-    max-height: 200px; /* 设置最大高度，超过这个高度将出现滚动条 */}
+    max-height: 150px; /* 设置最大高度，超过这个高度将出现滚动条 */}
 
