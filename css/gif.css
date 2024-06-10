@@ -3,7 +3,7 @@
     overflow: hidden;
 }
 .gif-container img {
-    width: 350px; /* 固定宽度 */
+    width: 220px; /* 固定宽度 */
     height: auto; /* 自适应高度 */
 }
 .gif-container1 {
@@ -14,20 +14,29 @@
     width: 300px; /* 固定宽度 */
     height: auto; /* 自适应高度 */
 }
+
+.gif-container2 {
+    overflow: hidden;
+    position: absolute;
+}
+.gif-container2 img {
+    width: 450px; /* 固定宽度 */
+    height: auto; /* 自适应高度 */
+}
 /* 设置各个GIF的位置 */
 #gif1 {
-    top: 62%;
-    left: 82%;
+    top: 75%;
+    left: 88%;
 }
 #gif2 {
-    top: 62%;
-    left: -3%;
+    top: 75%;
+    left: -2%;
 }
 #gif3 {
     top: 0%;
     left: 27%;
 }
 #gif4 {
-    top: 2.5%;
-    left: 1%;
+    top: 1.6%;
+    left: 2%;
 }

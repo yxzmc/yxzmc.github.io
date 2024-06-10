@@ -4,6 +4,8 @@ audio::-webkit-media-controls {
 }
 /* 改善播放器容器样式 */
 .player {
+    cursor: default;
+    font-size: 23px;
     border-radius: 15px;
     position: absolute;
     left: 35%;
@@ -17,6 +19,9 @@ audio::-webkit-media-controls {
     max-width: 800px;
     margin: 200px;
     text-align: center;
+}
+.song-info{
+    font-size: 16px;
 }
 /* 美化按钮样式 */
 .control-button {
@@ -36,8 +41,8 @@ audio::-webkit-media-controls {
 }
 /* 优化歌曲列表样式 */
 #song-list {
-    margin-top: 10px;
-    padding: 10px;
+    margin: 10px 30px 10px 30px;
+    padding: 5px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -52,7 +57,7 @@ audio::-webkit-media-controls {
     border-bottom: none;
 }
 #song-list li:hover {
-    background-color: rgb(156, 243, 243,0.5);
+    background-color: rgba(142, 245, 245, 0.5);
 }
 /* 响应式设计 */
 @media (max-width: 600px) {
