@@ -11,7 +11,7 @@
     position: absolute;
 }
 .gif-container1 img {
-    width: 300px; /* 固定宽度 */
+    width: 250px; /* 固定宽度 */
     height: auto; /* 自适应高度 */
 }
 
@@ -33,10 +33,10 @@
     left: -2%;
 }
 #gif3 {
-    top: 0%;
-    left: 27%;
+    top: 1%;
+    left: 29%;
 }
 #gif4 {
-    top: 1.6%;
+    top: -0.5%;
     left: 2%;
 }
