@@ -1,0 +1,18 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #f7c7c7;
+}
+.hidden-image {
+    position: absolute;
+    left: 50%; /* 根据图片大小和容器调整 */
+    transform: translateX(-50%) translateY(-250%); /* 初始位置在容器底部外 */
+    opacity: 0; /* 初始时图片完全透明 */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 动画效果 */
+}
+.image-container:hover .hidden-image {
+    opacity: 1; /* 鼠标悬停时图片不透明 */
+    transform: translateX(-50%) translateY(-290%); /* 鼠标悬停时图片上升 */
+}

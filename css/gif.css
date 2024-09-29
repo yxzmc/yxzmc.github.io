@@ -1,0 +1,42 @@
+.gif-container {
+    position: fixed;
+    overflow: hidden;
+}
+.gif-container img {
+    width: 220px; /* 固定宽度 */
+    height: auto; /* 自适应高度 */
+}
+.gif-container1 {
+    overflow: hidden;
+    position: absolute;
+}
+.gif-container1 img {
+    width: 180px; /* 固定宽度 */
+    height: auto; /* 自适应高度 */
+}
+
+.gif-container2 {
+    overflow: hidden;
+    position: absolute;
+}
+.gif-container2 img {
+    width: 350px; /* 固定宽度 */
+    height: auto; /* 自适应高度 */
+}
+/* 设置各个GIF的位置 */
+#gif1 {
+    top: 75%;
+    left: 88%;
+}
+#gif2 {
+    top: 75%;
+    left: -2%;
+}
+#gif3 {
+    top: 2%;
+    left: 29.8%;
+}
+#gif4 {
+    top: 0.5%;
+    left: 6%;
+}
